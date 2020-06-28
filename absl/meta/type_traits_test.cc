@@ -861,7 +861,7 @@ TEST(TypeTraitsTest, TestUnderlyingType) {
   ABSL_INTERNAL_EXPECT_ALIAS_EQUIVALENCE(underlying_type, enum_long_long);
 }
 
-struct GetTypeExtT {
+/*struct GetTypeExtT {
   template <typename T>
   absl::result_of_t<const GetTypeT&(T)> operator()(T&& arg) const {
     return GetType(std::forward<T>(arg));
@@ -875,7 +875,7 @@ TEST(TypeTraitsTest, TestResultOf) {
   EXPECT_EQ(TypeEnum::B, GetTypeExt(Wrap<TypeB>()));
   EXPECT_EQ(TypeEnum::C, GetTypeExt(Wrap<TypeC>()));
   EXPECT_EQ(TypeEnum::D, GetTypeExt(Wrap<TypeD>()));
-}
+}*/
 
 template <typename T>
 bool TestCopyAssign() {
